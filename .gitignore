@@ -1,0 +1,53 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
+ai-backend/venv/
+ai-backend/__pycache__/
+*.pyc
+__pycache__/
+
+# Environment and config
+.env
+.env.local
+.env.production
+
+# Logs
+*.log
+logs/
+*.pid
+
+# Generated files
+generated-dashboards/
+data/
+build/
+dist/
+
+# Temporary files
+*.tmp
+*.bak
+.cache/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Runtime directories that should be created by scripts
+!generated-dashboards/.gitkeep
+!logs/.gitkeep
+!data/.gitkeep
+
+# Build output
+backend/WebApplication1/bin/
+backend/WebApplication1/obj/
+generated-dashboards/
+logs/
+*.zip
+*.pdb
+*.dll
+*.exe
+*.cache

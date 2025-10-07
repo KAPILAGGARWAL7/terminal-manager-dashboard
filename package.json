@@ -1,0 +1,40 @@
+{
+  "name": "self-service-dashboard-ai",
+  "version": "1.0.0",
+  "description": "AI-powered Self Service Dashboard with PygWalker integration",
+  "main": "index.js",
+  "scripts": {
+    "setup": "./setup.sh",
+    "start": "./scripts/start-development.sh",
+    "start:prod": "./scripts/start-production.sh",
+    "health": "./scripts/health-check.sh",
+    "reset": "./scripts/reset-project.sh",
+    "install:frontend": "cd frontend && npm install",
+    "install:ai": "cd ai-backend && pip install -r requirements.txt",
+    "start:frontend": "cd frontend && npm start",
+    "start:ai": "cd ai-backend && python app.py",
+    "start:simple": "cd simple-backend && npm start",
+    "build:frontend": "cd frontend && npm run build"
+  },
+  "workspaces": [
+    "frontend",
+    "simple-backend"
+  ],
+  "keywords": [
+    "dashboard",
+    "ai",
+    "pygwalker",
+    "react",
+    "ollama",
+    "self-service"
+  ],
+  "author": "Dashboard Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}

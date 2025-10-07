@@ -1,0 +1,17 @@
+{
+  "prompt": "Create a sales performance dashboard with regional comparisons and trend analysis",
+  "excel_path": "",
+  "data": [
+    {
+      "region": "North",
+      "sales": 1000,
+      "fuel_type": "Gasoline"
+    },
+    {
+      "region": "South", 
+      "sales": 1500,
+      "fuel_type": "Diesel"
+    }
+  ],
+  "fileName": "test_data.xlsx"
+}

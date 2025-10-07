@@ -1,0 +1,6 @@
+setup.py
+ai_dashboard_backend.egg-info/PKG-INFO
+ai_dashboard_backend.egg-info/SOURCES.txt
+ai_dashboard_backend.egg-info/dependency_links.txt
+ai_dashboard_backend.egg-info/requires.txt
+ai_dashboard_backend.egg-info/top_level.txt

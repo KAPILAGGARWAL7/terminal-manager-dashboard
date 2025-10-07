@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Manufacturing Dashboard Generator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            width: 90%;
+            margin: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            color: #2d3748;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            color: #718096;
+            font-size: 1.1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #4a5568;
+        }
+
+        textarea, input, select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        textarea:focus, input:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .examples {
+            background: #f7fafc;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 0.5rem;
+        }
+
+        .examples h4 {
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+        }
+
+        .examples ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .examples li {
+            background: white;
+            margin: 0.25rem 0;
+            padding: 0.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            border-left: 4px solid #667eea;
+        }
+
+        .examples li:hover {
+            background: #edf2f7;
+        }
+
+        .generate-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            width: 100%;
+        }
+
+        .generate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .generate-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .result {
+            display: none;
+            background: #f0fff4;
+            border: 2px solid #68d391;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .result h3 {
+            color: #2f855a;
+            margin-bottom: 1rem;
+        }
+
+        .dashboard-link {
+            display: inline-block;
+            background: #48bb78;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+            transition: background-color 0.2s ease;
+        }
+
+        .dashboard-link:hover {
+            background: #38a169;
+        }
+
+        .error {
+            display: none;
+            background: #fed7d7;
+            border: 2px solid #fc8181;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            color: #c53030;
+        }
+
+        .status-info {
+            background: #ebf8ff;
+            border: 1px solid #bee3f8;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .status-info h4 {
+            color: #2b6cb0;
+            margin-bottom: 0.5rem;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+
+        .status-online { background-color: #48bb78; }
+        .status-offline { background-color: #f56565; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏭 AI Manufacturing Dashboard Generator</h1>
+            <p>Upload Excel files and generate professional dashboards using natural language prompts</p>
+        </div>
+
+        <div class="status-info">
+            <h4>System Status</h4>
+            <p><span class="status-indicator" id="systemStatus"></span>AI Backend: <span id="systemStatusText">Checking...</span></p>
+            <p><span class="status-indicator" id="ollamaStatus"></span>Ollama AI: <span id="ollamaStatusText">Checking...</span></p>
+        </div>
+
+        <form id="dashboardForm">
+            <div class="form-group">
+                <label for="excelFile">Upload Excel Data File (Optional)</label>
+                <input type="file" id="excelFile" accept=".xlsx,.xls" style="margin-bottom: 1rem;">
+                <small style="color: #718096; display: block; margin-bottom: 1rem;">Upload your Excel file first, then describe your dashboard</small>
+            </div>
+
+            <div class="form-group">
+                <label for="prompt">Dashboard Description</label>
+                <textarea id="prompt" placeholder="Describe the manufacturing dashboard you want to create..." required></textarea>
+
+                <div class="examples">
+                    <h4>💡 Example Manufacturing Dashboards:</h4>
+                    <ul>
+                        <li onclick="setPrompt('Create a lane performance dashboard showing throughput, OEE, and bay utilization')">Lane/Bay Performance Dashboard</li>
+                        <li onclick="setPrompt('Build a schedule vs actual adherence dashboard with production targets')">Schedule vs Actual Adherence Dashboard</li>
+                        <li onclick="setPrompt('Generate a throughput and capacity dashboard for manufacturing lines')">Throughput and Capacity Dashboard</li>
+                        <li onclick="setPrompt('Create a product mix and performance dashboard with quality metrics')">Product Mix and Performance Dashboard</li>
+                        <li onclick="setPrompt('Design an OEE dashboard with availability, performance, and quality breakdown')">Overall Equipment Effectiveness (OEE) Dashboard</li>
+                    </ul>
+                </div>
+            </div>
+
+            <button type="submit" class="generate-btn" id="generateBtn">
+                🚀 Generate Professional Dashboard
+            </button>
+        </form>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Generating your professional manufacturing dashboard...</p>
+            <p><small>This may take 30-60 seconds depending on AI model response time</small></p>
+        </div>
+
+        <div class="result" id="result">
+            <h3>✅ Dashboard Generated Successfully!</h3>
+            <p id="resultMessage"></p>
+            <div id="dashboardLinks"></div>
+        </div>
+
+        <div class="error" id="error">
+            <h3>❌ Generation Failed</h3>
+            <p id="errorMessage"></p>
+        </div>
+    </div>
+
+    <script>
+        // Configuration
+        const API_BASE = 'http://localhost:5247';
+
+        // Check system status on load
+        async function checkSystemStatus() {
+            try {
+                const response = await fetch(`${API_BASE}/api/status`);
+                const status = await response.json();
+
+                // Update system status
+                const systemStatusEl = document.getElementById('systemStatus');
+                const systemStatusTextEl = document.getElementById('systemStatusText');
+                const ollamaStatusEl = document.getElementById('ollamaStatus');
+                const ollamaStatusTextEl = document.getElementById('ollamaStatusText');
+
+                if (response.ok) {
+                    systemStatusEl.className = 'status-indicator status-online';
+                    systemStatusTextEl.textContent = 'Online';
+                } else {
+                    systemStatusEl.className = 'status-indicator status-offline';
+                    systemStatusTextEl.textContent = 'Offline';
+                }
+
+                // Check Ollama status
+                if (status.ollama && status.ollama.connected) {
+                    ollamaStatusEl.className = 'status-indicator status-online';
+                    ollamaStatusTextEl.textContent = `Online (${status.ollama.models?.length || 0} models)`;
+                } else {
+                    ollamaStatusEl.className = 'status-indicator status-offline';
+                    ollamaStatusTextEl.textContent = 'Offline - Start with "ollama serve"';
+                }
+
+            } catch (error) {
+                console.error('Status check failed:', error);
+                document.getElementById('systemStatus').className = 'status-indicator status-offline';
+                document.getElementById('systemStatusText').textContent = 'Connection Failed';
+                document.getElementById('ollamaStatus').className = 'status-indicator status-offline';
+                document.getElementById('ollamaStatusText').textContent = 'Unknown';
+            }
+        }
+
+        // Set prompt from examples
+        function setPrompt(promptText) {
+            document.getElementById('prompt').value = promptText;
+        }
+
+        // Handle form submission
+        document.getElementById('dashboardForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const prompt = document.getElementById('prompt').value.trim();
+            if (!prompt) {
+                showError('Please enter a dashboard description');
+                return;
+            }
+
+            const excelFileInput = document.getElementById('excelFile');
+            const excelFile = excelFileInput.files[0];
+
+            showLoading();
+            hideResult();
+            hideError();
+
+            try {
+                let excelPath = '';
+
+                // Upload Excel file first if provided
+                if (excelFile) {
+                    const formData = new FormData();
+                    formData.append('file', excelFile);
+                    formData.append('datasetName', `dashboard_data_${Date.now()}`);
+
+                    const uploadResponse = await fetch('http://localhost:5246/Dataset/Upload', {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    if (uploadResponse.ok) {
+                        const uploadResult = await uploadResponse.json();
+                        excelPath = uploadResult.filePath;
+                        console.log('Excel file uploaded:', excelPath);
+                    } else {
+                        showError('Failed to upload Excel file');
+                        return;
+                    }
+                }
+
+                // Generate dashboard
+                const response = await fetch(`${API_BASE}/api/dashboard/generate`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        prompt: prompt,
+                        excel_path: excelPath
+                    })
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.success) {
+                    showResult(result);
+                } else {
+                    showError(result.error || 'Dashboard generation failed');
+                }
+
+            } catch (error) {
+                console.error('Generation failed:', error);
+                showError('Failed to connect to AI backend. Make sure the backend is running on port 5247.');
+            } finally {
+                hideLoading();
+            }
+        });
+
+        function showLoading() {
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('generateBtn').disabled = true;
+        }
+
+        function hideLoading() {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('generateBtn').disabled = false;
+        }
+
+        function showResult(result) {
+            const resultEl = document.getElementById('result');
+            const messageEl = document.getElementById('resultMessage');
+            const linksEl = document.getElementById('dashboardLinks');
+
+            messageEl.textContent = result.message || 'Your manufacturing dashboard is ready!';
+
+            linksEl.innerHTML = `
+                <a href="${result.dashboard_url}" target="_blank" class="dashboard-link">
+                    🖥️ Open Dashboard
+                </a>
+                <a href="${result.embed_url}" target="_blank" class="dashboard-link">
+                    📱 Embedded View
+                </a>
+            `;
+
+            resultEl.style.display = 'block';
+        }
+
+        function hideResult() {
+            document.getElementById('result').style.display = 'none';
+        }
+
+        function showError(message) {
+            document.getElementById('errorMessage').textContent = message;
+            document.getElementById('error').style.display = 'block';
+        }
+
+        function hideError() {
+            document.getElementById('error').style.display = 'none';
+        }
+
+        // Check status on page load
+        checkSystemStatus();
+
+        // Refresh status every 30 seconds
+        setInterval(checkSystemStatus, 30000);
+    </script>
+</body>
+</html>

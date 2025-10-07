@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_AI_BACKEND_URL=http://ai-backend:5247
+      - REACT_APP_SIMPLE_BACKEND_URL=http://simple-backend:5246
+    depends_on:
+      - ai-backend
+      - simple-backend
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
+
+  ai-backend:
+    build:
+      context: ./ai-backend
+      dockerfile: Dockerfile
+    ports:
+      - "5247:5247"
+    environment:
+      - OLLAMA_URL=http://host.docker.internal:11434
+      - AI_BACKEND_PORT=5247
+      - PYTHONPATH=/app
+    volumes:
+      - ./generated-dashboards:/app/generated-dashboards
+      - ./logs:/app/logs
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  simple-backend:
+    build:
+      context: ./simple-backend
+      dockerfile: Dockerfile
+    ports:
+      - "5246:5246"
+    volumes:
+      - ./simple-backend:/app
+      - /app/node_modules
+
+  # Optional: Ollama service (requires Ollama Docker image)
+  # ollama:
+  #   image: ollama/ollama:latest
+  #   ports:
+  #     - "11434:11434"
+  #   volumes:
+  #     - ollama-data:/root/.ollama
+  #   environment:
+  #     - OLLAMA_HOST=0.0.0.0
+
+volumes:
+  ollama-data:

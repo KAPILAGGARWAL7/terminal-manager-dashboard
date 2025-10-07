@@ -1,0 +1,9 @@
+FROM llama3.1:8b 
+
+# Set the context window to a higher value. 
+# Warning: Higher value = more VRAM consumption!
+# Common steps: 8192, 16384, 32768
+PARAMETER num_ctx 16384
+
+# Use a high num_gpu to force offloading to your GPU (as discussed before)
+PARAMETER num_gpu 999

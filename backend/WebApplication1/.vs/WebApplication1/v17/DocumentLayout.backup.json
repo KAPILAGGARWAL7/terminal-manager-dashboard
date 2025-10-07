@@ -1,0 +1,170 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\H564647\\Desktop\\graphicwalker hug demo\\backend\\WebApplication1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{858C6BCC-B6D7-4091-879B-0B1157A71321}|WebApplication1.csproj|c:\\users\\h564647\\desktop\\graphicwalker hug demo\\backend\\webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{858C6BCC-B6D7-4091-879B-0B1157A71321}|WebApplication1.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{858C6BCC-B6D7-4091-879B-0B1157A71321}|WebApplication1.csproj|c:\\users\\h564647\\desktop\\graphicwalker hug demo\\backend\\webapplication1\\graphicwalkerconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{858C6BCC-B6D7-4091-879B-0B1157A71321}|WebApplication1.csproj|solutionrelative:graphicwalkerconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{858C6BCC-B6D7-4091-879B-0B1157A71321}|WebApplication1.csproj|c:\\users\\h564647\\desktop\\graphicwalker hug demo\\backend\\webapplication1\\controllers\\graphicwalkercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{858C6BCC-B6D7-4091-879B-0B1157A71321}|WebApplication1.csproj|solutionrelative:controllers\\graphicwalkercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{858C6BCC-B6D7-4091-879B-0B1157A71321}|WebApplication1.csproj|c:\\users\\h564647\\desktop\\graphicwalker hug demo\\backend\\webapplication1\\models\\graphicwalker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{858C6BCC-B6D7-4091-879B-0B1157A71321}|WebApplication1.csproj|solutionrelative:models\\graphicwalker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{858C6BCC-B6D7-4091-879B-0B1157A71321}|WebApplication1.csproj|c:\\users\\h564647\\desktop\\graphicwalker hug demo\\backend\\webapplication1\\webapplication1.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{858C6BCC-B6D7-4091-879B-0B1157A71321}|WebApplication1.csproj|solutionrelative:webapplication1.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{858C6BCC-B6D7-4091-879B-0B1157A71321}|WebApplication1.csproj|c:\\users\\h564647\\desktop\\graphicwalker hug demo\\backend\\webapplication1\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{858C6BCC-B6D7-4091-879B-0B1157A71321}|WebApplication1.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{858C6BCC-B6D7-4091-879B-0B1157A71321}|WebApplication1.csproj|c:\\users\\h564647\\desktop\\graphicwalker hug demo\\backend\\webapplication1\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{858C6BCC-B6D7-4091-879B-0B1157A71321}|WebApplication1.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{858C6BCC-B6D7-4091-879B-0B1157A71321}|WebApplication1.csproj|c:\\users\\h564647\\desktop\\graphicwalker hug demo\\backend\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{858C6BCC-B6D7-4091-879B-0B1157A71321}|WebApplication1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{858C6BCC-B6D7-4091-879B-0B1157A71321}|WebApplication1.csproj|c:\\users\\h564647\\desktop\\graphicwalker hug demo\\backend\\webapplication1\\webapplication1.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{858C6BCC-B6D7-4091-879B-0B1157A71321}|WebApplication1.csproj|solutionrelative:webapplication1.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\H564647\\Desktop\\graphicwalker hug demo\\backend\\WebApplication1\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\H564647\\Desktop\\graphicwalker hug demo\\backend\\WebApplication1\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T05:40:35.393Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GraphicWalker.cs",
+              "DocumentMoniker": "C:\\Users\\H564647\\Desktop\\graphicwalker hug demo\\backend\\WebApplication1\\Models\\GraphicWalker.cs",
+              "RelativeDocumentMoniker": "Models\\GraphicWalker.cs",
+              "ToolTip": "C:\\Users\\H564647\\Desktop\\graphicwalker hug demo\\backend\\WebApplication1\\Models\\GraphicWalker.cs",
+              "RelativeToolTip": "Models\\GraphicWalker.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAgwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T05:21:07.632Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WebApplication1",
+              "DocumentMoniker": "C:\\Users\\H564647\\Desktop\\graphicwalker hug demo\\backend\\WebApplication1\\WebApplication1.csproj",
+              "RelativeDocumentMoniker": "WebApplication1.csproj",
+              "ToolTip": "C:\\Users\\H564647\\Desktop\\graphicwalker hug demo\\backend\\WebApplication1\\WebApplication1.csproj",
+              "RelativeToolTip": "WebApplication1.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-08T11:44:18.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\H564647\\Desktop\\graphicwalker hug demo\\backend\\WebApplication1\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Users\\H564647\\Desktop\\graphicwalker hug demo\\backend\\WebApplication1\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-16T05:35:49.463Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\H564647\\Desktop\\graphicwalker hug demo\\backend\\WebApplication1\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\H564647\\Desktop\\graphicwalker hug demo\\backend\\WebApplication1\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-08T09:20:52.761Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WebApplication1.http",
+              "DocumentMoniker": "C:\\Users\\H564647\\Desktop\\graphicwalker hug demo\\backend\\WebApplication1\\WebApplication1.http",
+              "RelativeDocumentMoniker": "WebApplication1.http",
+              "ToolTip": "C:\\Users\\H564647\\Desktop\\graphicwalker hug demo\\backend\\WebApplication1\\WebApplication1.http",
+              "RelativeToolTip": "WebApplication1.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-08-08T11:40:39.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GraphicWalkerConnection.cs",
+              "DocumentMoniker": "C:\\Users\\H564647\\Desktop\\graphicwalker hug demo\\backend\\WebApplication1\\GraphicWalkerConnection.cs",
+              "RelativeDocumentMoniker": "GraphicWalkerConnection.cs",
+              "ToolTip": "C:\\Users\\H564647\\Desktop\\graphicwalker hug demo\\backend\\WebApplication1\\GraphicWalkerConnection.cs",
+              "RelativeToolTip": "GraphicWalkerConnection.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAgwJcAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T06:36:30.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\H564647\\Desktop\\graphicwalker hug demo\\backend\\WebApplication1\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\H564647\\Desktop\\graphicwalker hug demo\\backend\\WebApplication1\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-16T05:43:26.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GraphicWalkerController.cs",
+              "DocumentMoniker": "C:\\Users\\H564647\\Desktop\\graphicwalker hug demo\\backend\\WebApplication1\\Controllers\\GraphicWalkerController.cs",
+              "RelativeDocumentMoniker": "Controllers\\GraphicWalkerController.cs",
+              "ToolTip": "C:\\Users\\H564647\\Desktop\\graphicwalker hug demo\\backend\\WebApplication1\\Controllers\\GraphicWalkerController.cs",
+              "RelativeToolTip": "Controllers\\GraphicWalkerController.cs",
+              "ViewState": "AgIAALwAAAAAAAAAAADwvxQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T08:58:54.458Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
